@@ -4,7 +4,7 @@ You  can find below the steps needed for install and run the springboot app.
 
 
 # Steps
-- git clone this link, type this line into your terminal: 
+- Clone this link, type this line into your terminal: 
   `git clone https://github.com/Lina-Hammami/thortful-challenge.git`
 - Open the project on your preferred IDE (example IntelliJ)
 - Make sure you have installed the convenient java version (java17)
