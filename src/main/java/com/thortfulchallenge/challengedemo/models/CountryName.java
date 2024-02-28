@@ -1,10 +1,12 @@
 package com.thortfulchallenge.challengedemo.models;
 
-import java.util.Dictionary;
-public class CountryName {
-    private String common;
-    private String official;
-    private Dictionary<String, NativeName> nativeName;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import java.util.Map;
 
-    // getters and setters
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+public class CountryName {
+    private  String common;
+    private  String official;
+    private Map<String, NativeName> nativeName;
+
 }

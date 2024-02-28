@@ -1,11 +1,8 @@
 package com.thortfulchallenge.challengedemo.models;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
-import com.thortfulchallenge.challengedemo.models.CountryName;
-import com.thortfulchallenge.challengedemo.models.Idd;
-
-import java.util.Currency;
-import java.util.Dictionary;
-
+import java.util.Map;
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Country {
     private CountryName name;
     private String[] tld;
@@ -16,14 +13,14 @@ public class Country {
     private Boolean independent;
     private String status;
     private Boolean unMember;
-    private Dictionary<String, Currency> currencies;
+    private Map<String, Currency> currencies;
     private Idd idd;
     private String[] capital;
     private String[] altSpellings;
     private String region;
     private String subregion;
-    private Dictionary<String, String> languages;
-    private Dictionary<String, Translation> translations;
+    private Map<String, String> languages;
+    private Map<String, Translation> translations;
     private double[] latlng;
     private Boolean landlocked;
     private String[] borders;
@@ -42,6 +39,4 @@ public class Country {
     private PostalCode postalCode;
     private int population;
     private Gini gini;
-
-    // getters and setters
 }
