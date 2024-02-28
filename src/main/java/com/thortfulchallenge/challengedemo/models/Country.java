@@ -1,8 +1,10 @@
 package com.thortfulchallenge.challengedemo.models;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import lombok.Data;
 
 import java.util.Map;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+@Data
 public class Country {
     private CountryName name;
     private String[] tld;
