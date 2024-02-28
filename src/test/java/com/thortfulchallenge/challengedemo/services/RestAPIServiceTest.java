@@ -5,6 +5,7 @@ import com.thortfulchallenge.challengedemo.models.Country;
 import com.thortfulchallenge.challengedemo.services.CountryService;
 import com.thortfulchallenge.challengedemo.servicesImpl.CountryServiceImpl;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -19,7 +20,7 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 class CountryServiceTest {
 
-    @MockBean
+    @Mock
     private RestTemplate restTemplate;
 
     @Test
@@ -29,9 +30,9 @@ class CountryServiceTest {
                 .thenReturn(countries);
 
         CountryService countryService = new CountryServiceImpl(restTemplate);
-//        List<Country> result = countryService.getCountries();
+        List<Country> result = countryService.getCountries();
 
-//        assertEquals(2, result.size());
+        assertEquals(2, result.size());
     }
 
     @Test

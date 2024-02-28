@@ -20,12 +20,7 @@ public class CountryServiceImpl implements CountryService {
     private String apiUrl;
 
     @Autowired
-    private final RestTemplate restTemplate;
-
-    @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder builder) {
-        return builder.build();
-    }
+    private RestTemplate restTemplate;
 
     @Autowired
     public CountryServiceImpl(RestTemplate restTemplate) {
